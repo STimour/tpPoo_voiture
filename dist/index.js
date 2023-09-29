@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const client_1 = require("./client");
 const garage_1 = require("./garage");
 const voiture_1 = require("./voiture");
 const garage = new garage_1.Garage("Gz", []);
@@ -14,5 +15,7 @@ garage.ajoutVoiture(voiture3);
 garage.ajoutVoiture(voiture4);
 garage.ajoutVoiture(voiture5);
 console.log(garage);
-garage.voitureMoinsCher();
-garage.couleurVoiture("Rouge");
+const clientM = new client_1.Client("Popo", "moins chere");
+const clientC = new client_1.Client("Poupou", "Rouge");
+garage.voitureMoinsCher(clientM.envieVoiture);
+garage.couleurVoiture(clientC.envieVoiture);

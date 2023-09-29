@@ -1,3 +1,4 @@
+import { Client } from "./client";
 import { Garage } from "./garage";
 import { Voiture } from "./voiture";
 
@@ -17,5 +18,9 @@ garage.ajoutVoiture(voiture5)
 
 console.log(garage);
 
-garage.voitureMoinsCher()
-garage.couleurVoiture("Rouge")
+const clientM = new Client("Popo", "moins chere")
+const clientC = new Client("Poupou", "Rouge")
+
+
+garage.voitureMoinsCher(clientM.envieVoiture)
+garage.couleurVoiture(clientC.envieVoiture)

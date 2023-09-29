@@ -11,17 +11,20 @@ export class Garage{
        { this._nom = _nom
         this._listeVoiture = _listeVoiture}
 
-    public voitureMoinsCher(): Voiture{      
+    public voitureMoinsCher(envie: string): Voiture{      
         let voitureM = this._listeVoiture[0]
-         
-        for(const voiture of this._listeVoiture){
-            if (voiture.prix < voitureM.prix){
-                voitureM = voiture
+        if(envie === "moins chere"){
+
+            for(const voiture of this._listeVoiture){
+                if (voiture.prix < voitureM.prix){
+                    voitureM = voiture
+                }
             }
+            console.log(`La voiture la moins chère est ${voitureM.marque} ${voitureM.model} avec un prix de ${voitureM.prix} euros.`);
         }
-        console.log(`La voiture la moins chère est ${voitureM.marque} ${voitureM.model} avec un prix de ${voitureM.prix} euros.`);
         return voitureM
     }
+    
 
     public couleurVoiture(couleurVoulu : string): Voiture[]{
         let voituresDeCouleur: Voiture[] = []
