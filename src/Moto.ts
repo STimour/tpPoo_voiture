@@ -1,4 +1,4 @@
-import { TypeVehicule, Vehicule } from "./vihecules";
+import { TypeVehicule, Vehicule } from "./Vehicules";
 
 export class Moto extends Vehicule{
     constructor(

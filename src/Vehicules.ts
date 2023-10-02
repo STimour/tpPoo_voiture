@@ -1,6 +1,6 @@
 import { Camion } from "./Camion"
 import { Moto } from "./Moto"
-import { Voiture } from "./voiture"
+import { Voiture } from "./Voiture"
 
 export enum TypeVehicule {
     Camion,

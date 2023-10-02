@@ -1,6 +1,8 @@
-import { Client } from "./client";
-import { Garage } from "./garage";
-import { Voiture } from "./voiture";
+import { Camion } from "./Camion";
+import { Client } from "./Client";
+import { Garage } from "./Garage";
+import { Moto } from "./Moto";
+import { Voiture } from "./Voiture";
 
 const garage = new Garage("Gz", [])
 
@@ -16,7 +18,6 @@ garage.ajoutVoiture(voiture3)
 garage.ajoutVoiture(voiture4)
 garage.ajoutVoiture(voiture5)
 
-console.log(garage);
 
 const clientM = new Client("Popo", "moins chere")
 const clientC = new Client("Poupou", "Rouge")
@@ -24,3 +25,11 @@ const clientC = new Client("Poupou", "Rouge")
 
 garage.voitureMoinsCher(clientM.envieVoiture)
 garage.couleurVoiture(clientC.envieVoiture)
+
+
+const Camion1 = new Camion("bmw", "Camion", "DD111KK", "Rouge", 5000000, 10000, 2003)
+const moto = new Moto("jeep", "rx", "MO222TO", "Noir", 50000, 1010, 1999)
+
+garage.ajoutCamion(Camion1)
+garage.ajoutMoto(moto)
+console.log(garage);

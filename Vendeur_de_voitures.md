@@ -36,3 +36,4 @@ Un client souhaite acheter un camion de plus de 30000km.
 10 - Modifiez la classe Garage qui contient une liste de véhicules
 11 - Créez une méthode pour récupérer une sous liste de véhicules en fonction du type de véhicule
 12 - Créez des instances de ces classes pour répondre aux besoins des différents clients
+ 
