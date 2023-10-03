@@ -37,6 +37,23 @@ class Garage {
         console.log(infosVoitures);
         return voituresDeCouleur;
     }
+    getTypeVehicule(typeVehicule) {
+        let voiture = [];
+        let moto = [];
+        let camion = [];
+        if (typeVehicule === "voiture") {
+            console.log(this._listeVoiture);
+        }
+        else if (typeVehicule === "moto") {
+            console.log(this._listeMoto);
+        }
+        else if (typeVehicule === "camion") {
+            console.log(this._listeCamion);
+        }
+        else {
+            console.log("type de véhicule n'est pas present");
+        }
+    }
     ajoutVoiture(voitures) {
         this._listeVoiture.push(voitures);
     }

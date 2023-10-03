@@ -35,7 +35,6 @@ export class Garage{
         }
         return voitureM
     }
-    
 
     public couleurVoiture(couleurVoulu : string): Voiture[]{
         let voituresDeCouleur: Voiture[] = []
@@ -50,9 +49,25 @@ export class Garage{
         const infosVoitures: string[] = voituresDeCouleur.map(voiture => {
             return `${voiture.marque} ${voiture.model}, ${voiture.couleur}, Année: ${voiture.anImmat}, Prix: ${voiture.prix} euros`;
         });  
-        console.log(infosVoitures);
-         
+        console.log(infosVoitures);    
         return voituresDeCouleur
+    }
+
+    public getTypeVehicule(typeVehicule: string){
+        let voiture: Voiture[] = []
+        let moto: Moto[] = []
+        let camion: Camion[] = []
+
+        if(typeVehicule === "voiture"){
+            console.log(this._listeVoiture)
+        }else if(typeVehicule === "moto"){
+            console.log(this._listeMoto)
+        }else if(typeVehicule === "camion"){
+            console.log(this._listeCamion)
+        }else{
+            console.log("type de véhicule n'est pas present");
+            
+        }
     }
 
     public ajoutVoiture(voitures: Voiture): void {
